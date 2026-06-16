@@ -29,7 +29,7 @@ public final class OrderMapper {
                         .map(ProductMapper::toResponse)
                         .toList();
 
-        response.setProductResponseList(products);
+        response.setProductsList(products);
 
         return response;
     }

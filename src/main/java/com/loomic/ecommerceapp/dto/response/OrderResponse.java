@@ -1,12 +1,18 @@
 package com.loomic.ecommerceapp.dto.response;
 
-import com.loomic.ecommerceapp.entity.CartStatus;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@JsonPropertyOrder({
+        "orderId",
+        "transactionId",
+        "cartId",
+        "productsList",
+})
 @Getter
 @Setter
 public class OrderResponse {
@@ -17,5 +23,5 @@ public class OrderResponse {
 
     private Long cartId;
 
-    private List<ProductResponse> productResponseList = new ArrayList<>();
+    private List<ProductResponse> productsList = new ArrayList<>();
 }
